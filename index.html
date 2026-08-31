@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Sophia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600;7..72,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#" class="brand"><span class="dot"></span>SophPort</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#archive">Output</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Personal Academic Archive</p>
+        <h1>Every exam,<br>every quiz,<br><span class="accent">one record.</span></h1>
+        <p class="lede">I'm Sophia — a student keeping an organized log of my coursework. This archive holds the quizzes, laboratory activities, and exams I've completed throughout my studies.</p>
+        <div class="hero-actions">
+          <a href="#archive" class="btn btn-solid">View the archive</a>
+          <a href="#about" class="btn btn-ghost">About me</a>
+        </div>
+      </div>
+
+      <div class="id-card">
+        <div class="id-top">
+          <div class="id-photo" id="idPhoto">
+            <img src="assets/profile.jpg" alt="Sophia Salazar" onerror="this.remove();">
+            <span class="id-photo-fallback">SS</span>
+          </div>
+          <div>
+            <div class="id-name">Sophia Salazar</div>
+            <div class="id-role">Student · Bachelor of Science in Computer Science</div>
+          </div>
+        </div>
+        <hr class="id-divider">
+        <div class="id-stats">
+          <div class="id-stat"><b id="statExam">0</b><span>Exams</span></div>
+          <div class="id-stat"><b id="statQuiz">0</b><span>Quizzes</span></div>
+          <div class="id-stat"><b id="statLab">0</b><span>Laboratory</span></div>
+          <div class="id-stat"><b>2026</b><span>Since</span></div>
+        </div>
+        <div class="id-stamp">Verified<br>Record</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">About Me</p>
+        <h2 style="font-size:clamp(24px,3vw,32px);">Why I keep this archive</h2>
+        <p>I'm a Computer Science student. I started this archive to keep every quiz, laboratory activity, and exam I take somewhere organized, so I can look back on how I've grown and share my work with anyone curious about my process.</p>
+        <span>Skill/Tool</span>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Java</span>
+          <span class="tag">Visual Studio Code</span>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><span>Institution</span><span>Cavite State University - Silang Campus</span></li>
+        <li><span>Program</span><span>Bachelor of Science in Computer Science</span></li>
+        <li><span>Year Level</span><span>3rd Year</span></li>
+        <li><span>Location</span><span>Silang, Cavite</span></li>
+        <li><span>Email</span><span>sophia.salazar@cvsu.edu.ph</span></li>
+        <li><span>GitHub</span><span>github.com/p1yaya</span></li>
+        <li><span>Interest</span><span class="fact-tags"><span class="tag">Watching movies</span><span class="tag">Reading books</span><span class="tag">Music</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ARCHIVE ============ -->
+  <section id="archive">
+    <div class="wrap">
+      <div class="archive-head">
+        <div>
+          <p class="eyebrow">Coursework Archive</p>
+          <h2>Quizzes, Laboratory &amp; Exams</h2>
+          <p class="archive-sub">A running log of my assessments and activities.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="quiz">Quizzes</button>
+        <button class="filter-btn" data-filter="laboratory">Laboratory</button>
+        <button class="filter-btn" data-filter="exam">Exams</button>
+        <div class="search-wrap">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="searchInput" placeholder="Search entries…">
+        </div>
+      </div>
+
+      <div class="grid-cards" id="cardGrid"></div>
+      <p class="empty-state" id="emptyState">No entries match — try a different filter or search.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <p>Contacts</p>
+    <ul class="footer-links">
+      <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sophia.salazar@cvsu.edu.ph" target="_blank" rel="noopener">Email</a></li>
+      <li><a href="https://github.com/p1yaya" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://facebook.com/ph1aya" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <span class="card-code" id="modalCode"></span>
+    <h3 id="modalTitle"></h3>
+    <div class="modal-meta" id="modalMeta"></div>
+    <div class="modal-gallery" id="modalGallery"></div>
+    <button class="modal-close" id="modalClose">Close</button>
+  </div>
+</div>
+
+<div class="lightbox-backdrop" id="lightboxBackdrop">
+  <img id="lightboxImg" src="" alt="Full size view">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
