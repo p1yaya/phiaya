@@ -4,7 +4,19 @@ const yearEl = document.getElementById('year');
 
   let entries = [
     { code:'DCIT 26', subject:'quiz', title:'Emerging Technologies', date:'2026-04-25', type:'Image',
-      url:'files/dcit26_quiz1.1.jpg', images:['files/dcit26_quiz1.1.jpg', 'files/dcit26_quiz1.2.jpg'] },
+          url: 'files/dcit26_quiz1.1.jpg', images: ['files/dcit26_quiz1.1.jpg', 'files/dcit26_quiz1.2.jpg']
+      },
+    { code: 'DCIT 26', subject: 'quiz', title: 'Requirement Analysis & Unified Modeling Language', date: '2026-10-06', type: 'Image',
+          url: 'files/dcit26_quiz2.jpg', images: ['files/dcit26_quiz2.jpg']
+      },
+    { code: 'DCIT 26', subject: 'quiz', title: 'The SOLID Principles', date: '2026-10-06', type: 'Image',
+          url: 'files/dcit26_quiz3.jpg', images: ['files/dcit26_quiz3.jpg']
+      },
+    { code: 'DCIT 26', subject: 'exam', title: 'Midterm Exam', date: '2026-10-06', type: 'Image',
+          url: 'files/dcit26_midtermexam.jpg', images: ['files/dcit26_midtermexam.jpg']
+      },
+   
+
     // Example with a real linked file and a thumbnail image:
     // { code:'ART 101', subject:'laboratory', title:'Color Theory Exercise', date:'2026-04-10',
     //   type:'PDF', url:'files/color-theory-lab.pdf', image:'files/color-theory-lab-thumb.jpg' },
