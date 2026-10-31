@@ -18,10 +18,10 @@ const yearEl = document.getElementById('year');
     { code: 'DCIT 26', subject: 'exam', title: 'Midterm Exam', date: '2026-10-06', type: 'Image',
           url: 'files/dcit26_midtermexam.jpg', images: ['files/dcit26_midtermexam.jpg']
       },
-    { code: 'DCIT 26', subject: 'activity', title: 'Activity 1', date: '2026-10-06', type: 'PDF',
+    { code: 'DCIT 26', subject: 'activity', title: 'Activity 1', date: '2026-09-12', type: 'PDF',
           url: 'files/dcit26_act1.pdf', images: ['files/dcit26_act1.jpg']
       },
-    { code: 'DCIT 26', subject: 'activity', title: 'Activity 2', date: '2026-10-06', type: 'PDF',
+    { code: 'DCIT 26', subject: 'activity', title: 'Activity 2', date: '2026-09-12', type: 'PDF',
           url: 'files/dcit26_act2.pdf', images: ['files/dcit26_act2.jpg']
       },
 
