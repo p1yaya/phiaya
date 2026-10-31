@@ -18,15 +18,20 @@ const yearEl = document.getElementById('year');
     { code: 'DCIT 26', subject: 'exam', title: 'Midterm Exam', date: '2026-10-06', type: 'Image',
           url: 'files/dcit26_midtermexam.jpg', images: ['files/dcit26_midtermexam.jpg']
       },
-   
+    { code: 'DCIT 26', subject: 'activity', title: 'Activity 1', date: '2026-10-06', type: 'PDF',
+          url: 'files/dcit26_act1.pdf', images: ['files/dcit26_act1.jpg']
+      },
+    { code: 'DCIT 26', subject: 'activity', title: 'Activity 2', date: '2026-10-06', type: 'PDF',
+          url: 'files/dcit26_act2.pdf', images: ['files/dcit26_act2.jpg']
+      },
 
     // Example with a real linked file and a thumbnail image:
     // { code:'ART 101', subject:'laboratory', title:'Color Theory Exercise', date:'2026-04-10',
     //   type:'PDF', url:'files/color-theory-lab.pdf', image:'files/color-theory-lab-thumb.jpg' },
   ];
 
-  const SUBJECT_LABEL = { quiz:'Quiz', longquiz: 'Long Quiz', exam:'Exam', laboratory:'Laboratory' };
-  const SUBJECT_STAMP = { quiz:'Quiz Logged', longquiz: 'Long Quiz Logged', exam:'Exam Logged', laboratory:'Lab Logged' };
+  const SUBJECT_LABEL = { quiz:'Quiz', longquiz: 'Long Quiz', exam:'Exam', laboratory:'Laboratory', activity:'Activity' };
+  const SUBJECT_STAMP = { quiz:'Quiz Logged', longquiz: 'Long Quiz Logged', exam:'Exam Logged', laboratory:'Lab Logged', activity: 'Activity Logged' };
 
   let activeFilter = 'all';
   let searchTerm = '';
@@ -74,10 +79,13 @@ const yearEl = document.getElementById('year');
     const statQuiz = document.getElementById('statQuiz');
     const statLongQuiz = document.getElementById('statLongQuiz');
     const statLab = document.getElementById('statLab');
+    const statAct = document.getElementById('statAct');
     if (statExam) statExam.textContent = entries.filter(e => e.subject === 'exam').length;
     if (statQuiz) statQuiz.textContent = entries.filter(e => e.subject === 'quiz').length;
     if (statLongQuiz) statLongQuiz.textContent = entries.filter(e => e.subject === 'longquiz').length;
     if (statLab) statLab.textContent = entries.filter(e => e.subject === 'laboratory').length;
+    if (statAct) statAct.textContent = entries.filter(e => e.subject === 'activity').length;
+
 
     grid.querySelectorAll('.view').forEach(btn => {
       btn.addEventListener('click', () => openModal(entries[+btn.dataset.index]));
